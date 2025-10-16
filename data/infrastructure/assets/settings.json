@@ -4,19 +4,21 @@
     "tags": {
       "awslogs-create-group": "true",
       "awslogs-group": "/ecs/temporary/Daily",
-      "awslogs-region": "",
-      "awslogs-stream-prefix": "ecs"
+      "awslogs-region": null,
+      "awslogs-stream-prefix": "ecs",
+      "project": null
     },
-    "log_group_class": "STANDARD"
+    "logGroupClass": "STANDARD"
   }, {
     "logGroupName": "/ecs/temporary/Distributions",
     "tags": {
       "awslogs-create-group": "true",
       "awslogs-group": "/ecs/temporary/Distributions",
-      "awslogs-region": "",
-      "awslogs-stream-prefix": "ecs"
+      "awslogs-region": null,
+      "awslogs-stream-prefix": "ecs",
+      "project": null
     },
-    "log_group_class": "STANDARD"
+    "logGroupClass": "STANDARD"
   }],
   "tasks": [
     
