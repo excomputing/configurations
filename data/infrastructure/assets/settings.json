@@ -1,0 +1,24 @@
+{
+  "watches": [{
+    "logGroupName": "/ecs/temporary/Daily",
+    "tags": {
+      "awslogs-create-group": "true",
+      "awslogs-group": "/ecs/temporary/Daily",
+      "awslogs-region": "",
+      "awslogs-stream-prefix": "ecs"
+    },
+    "log_group_class": "STANDARD"
+  }, {
+    "logGroupName": "/ecs/temporary/Distributions",
+    "tags": {
+      "awslogs-create-group": "true",
+      "awslogs-group": "/ecs/temporary/Distributions",
+      "awslogs-region": "",
+      "awslogs-stream-prefix": "ecs"
+    },
+    "log_group_class": "STANDARD"
+  }],
+  "tasks": [
+    
+  ]
+}
