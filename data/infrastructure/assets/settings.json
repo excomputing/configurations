@@ -5,7 +5,7 @@
       "tags": [
         {
           "key": "project",
-          "value": null
+          "value": "environment"
         }
       ]
     }
@@ -17,7 +17,7 @@
       "awslogs-group": "/ecs/temporary/Daily",
       "awslogs-region": null,
       "awslogs-stream-prefix": "ecs",
-      "project": null
+      "project": "environment"
     },
     "logGroupClass": "STANDARD"
   }, {
@@ -27,7 +27,7 @@
       "awslogs-group": "/ecs/temporary/Distributions",
       "awslogs-region": null,
       "awslogs-stream-prefix": "ecs",
-      "project": null
+      "project": "environment"
     },
     "logGroupClass": "STANDARD"
   }],
@@ -134,7 +134,5 @@
         "operatingSystemFamily": "LINUX"
       }
     }
-
-    
   ]
 }
