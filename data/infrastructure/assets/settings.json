@@ -39,7 +39,7 @@
       "networkMode": "awsvpc",
       "containerDefinitions": [{
         "name": "daily",
-        "image": "{ecr-endpoint}:daily",
+        "image": ":daily",
         "portMappings": [
           {
             "containerPort": 80,
@@ -90,7 +90,7 @@
       "networkMode": "awsvpc",
       "containerDefinitions": [{
         "name": "distributions",
-        "image": "{ecr-endpoint}:distributions",
+        "image": ":distributions",
         "portMappings": [
           {
             "containerPort": 80,
