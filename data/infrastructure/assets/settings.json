@@ -1,7 +1,7 @@
 {
   "clusters": [
     {
-      "clusterName": "TemporaryCluster",
+      "clusterName": "temporary-cluster",
       "tags": [
         {
           "key": "project",
@@ -33,7 +33,7 @@
   }],
   "tasks": [
     {
-      "family": "TemporaryDaily",
+      "family": "temporary-daily",
       "taskRoleArn": null,
       "executionRoleArn": null,
       "networkMode": "awsvpc",
@@ -84,7 +84,7 @@
       }
     },
     {
-      "family": "TemporaryDistributions",
+      "family": "temporary-distributions",
       "taskRoleArn": null,
       "executionRoleArn": null,
       "networkMode": "awsvpc",
@@ -137,7 +137,7 @@
   ],
   "machines": [
     {
-      "name": "TemporaryContinuous",
+      "name": "temporary-continuous",
       "definition": null,
       "roleArn": null,
       "type": "STANDARD",
