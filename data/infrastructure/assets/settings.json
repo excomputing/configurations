@@ -134,5 +134,28 @@
         "operatingSystemFamily": "LINUX"
       }
     }
+  ],
+  "machines": [
+    {
+      "name": "TemporaryContinuous",
+      "definition": null,
+      "roleArn": null,
+      "type": "STANDARD",
+      "loggingConfiguration": {
+        "level": "OFF",
+        "includeExecutionData": false
+      },
+      "tags": [
+        {
+          "key": "project",
+          "value": "environment"
+        }
+      ],
+      "tracingConfiguration": {
+        "enabled": false
+      },
+      "publish": true,
+      "versionDescription": "default"
+    }
   ]
 }
