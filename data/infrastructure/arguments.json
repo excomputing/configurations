@@ -1,5 +1,6 @@
 {
   "seed": 5,
   "project_tag": "environment",
-  "project_key_name": "EnvironmentalIntelligence"
+  "project_key_name": "EnvironmentalIntelligence",
+  "machines_prefix": "infrastructure/machines/"
 }

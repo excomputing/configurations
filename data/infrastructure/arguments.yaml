@@ -1,3 +1,4 @@
 seed: 5
 project_tag: "environment" # The project's tag value
 project_key_name: "EnvironmentalIntelligence" # The project's key name
+machines_prefix: "infrastructure/machines/" # The prefix of the Amazon S3 (Simple Storage Service) bucket wherein the project's bare state machines definitions reside
