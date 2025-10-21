@@ -1,0 +1,69 @@
+{
+  "StartAt": "daily",
+  "TimeoutSeconds": 3600,
+  "States": {
+    "daily": {
+      "Type": "Task",
+      "Resource": "arn:aws:states:::ecs:runTask.sync",
+      "Parameters": {
+        "LaunchType": "FARGATE",
+        "Cluster": "cluster/TemporaryCluster",
+        "TaskDefinition": "task-definition/TemporaryDaily",
+        "NetworkConfiguration": {
+          "AwsvpcConfiguration": {
+            "Subnets": null,
+            "SecurityGroups": null,
+            "AssignPublicIp": "ENABLED"
+          }
+        }
+      },
+      "Next": "distributions",
+      "Catch": [
+        {
+          "ErrorEquals": [
+            "States.ALL"
+          ],
+          "Next": "Notify Failure",
+          "Comment": "The daily task"
+        }
+      ],
+      "Comment": "The daily task succeeded.  Next, the distributions task."
+    },
+    "distributions": {
+      "Type": "Task",
+      "Resource": "arn:aws:states:::ecs:runTask.sync",
+      "Parameters": {
+        "LaunchType": "FARGATE",
+        "Cluster": "cluster/TemporaryCluster",
+        "TaskDefinition": "task-definition/TemporaryDistributions",
+        "NetworkConfiguration": {
+          "AwsvpcConfiguration": {
+            "Subnets": null,
+            "SecurityGroups": null,
+            "AssignPublicIp": "ENABLED"
+          }
+        }
+      },
+      "Catch": [
+        {
+          "ErrorEquals": [
+            "States.ALL"
+          ],
+          "Comment": "The distributions task",
+          "Next": "Notify Failure"
+        }
+      ],
+      "Comment": "The distributions task succeeded.",
+      "End": true
+    },
+    "Notify Failure": {
+      "Type": "Task",
+      "Resource": "arn:aws:states:::sns:publish",
+      "Parameters": {
+        "TopicArn": null,
+        "Message.$": "$"
+      },
+      "End": true
+    }
+  }
+}
